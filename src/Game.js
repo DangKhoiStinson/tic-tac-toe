@@ -99,7 +99,9 @@ class Game extends React.Component {
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
-
+    if(this.state.stepNumber===9 && winner === null){
+      status = 'No one wins LOL :)))))';
+    }
     return (
       <div className="game">
         <div className="game-board">
